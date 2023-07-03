@@ -5,16 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-
-<h2>Booking Form</h2>
+<h2>Room Availability Form</h2>
 <hr>
 <form action="" method="post">
 {% csrf_token %}
 {{form.as_p}}
-
     <input type="submit">
-    <a href="roomchecking/">check room availability</a>
-    </form>
+   <hr>
+   {% for i in list %}
+   {{i}} <br>
+{% endfor %}
 
 </body>
 </html>
